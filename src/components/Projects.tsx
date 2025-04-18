@@ -36,7 +36,6 @@ const Projects = () => {
       tools: "Python, Pandas, Seaborn, Matplotlib",
       highlights: ["Data visualization", "Statistical analysis", "Pattern recognition"],
       github: null, // Private
-      
     },
     {
       title: "English–Kannada Translation",
@@ -49,7 +48,6 @@ const Projects = () => {
         "Low-resource adaptation",
       ],
       github: null, // Private
-      
     },
   ];
 
@@ -106,17 +104,19 @@ const Projects = () => {
                       GitHub (Private)
                     </Button>
                   )}
-                  <Button
-                    variant="outline"
-                    size="sm"
-                    className="flex items-center gap-2"
-                    asChild
-                  >
-                    <a href={project.website} target="_blank" rel="noopener noreferrer">
-                      <ExternalLink size={16} />
-                      Live Demo
-                    </a>
-                  </Button>
+                  {project.website && (
+                    <Button
+                      variant="outline"
+                      size="sm"
+                      className="flex items-center gap-2"
+                      asChild
+                    >
+                      <a href={project.website} target="_blank" rel="noopener noreferrer">
+                        <ExternalLink size={16} />
+                        Live Demo
+                      </a>
+                    </Button>
+                  )}
                 </div>
               </div>
             </div>
